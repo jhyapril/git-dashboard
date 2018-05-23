@@ -1,4 +1,5 @@
 # git-dashboard
+<<<<<<< HEAD
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
@@ -54,3 +55,6 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+=======
+A tool to save your daily git work and generate sprint and monthly performance
+>>>>>>> ba75ded0f41e80f509ccc702b11ab15cd0d88fea
