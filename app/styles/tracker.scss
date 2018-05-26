@@ -1,0 +1,33 @@
+.content-wrapper{
+
+  .daily-input{
+    max-height: 25rem;
+    .input-group-text{
+      min-width: 12rem;
+    }
+
+    .minus {
+      margin: 0 5px 0 5px;
+      min-width: 40px;
+      font-weight: bold;
+      border-radius: 100%;
+    }
+    .plus {
+      min-width: 40px;
+      font-weight: bold;
+      border-radius: 20%;
+    }
+
+  }
+
+
+  .area-graph{
+    max-height: 15rem;
+    min-height: 5rem;
+  }
+
+
+
+
+
+}

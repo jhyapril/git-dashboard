@@ -1,0 +1,58 @@
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="#">Dashboard</a>
+      </li>
+      <li class="breadcrumb-item active">My Dashboard</li>
+    </ol>
+
+    {{#each model as |sprintCard|}}
+      {{sprint-listing sprint = sprintCard}}
+      {{daily-git-input}}
+
+      <div class="area-graph mb-3">
+        <div class="card-header">
+          <i class="fa fa-area-chart"></i> Daily Performance
+        </div>
+        <div class="card-body">
+          <canvas id="myAreaChart" width="100%" height="50"></canvas>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+
+      <div class="row">
+      <div class="col-lg-8">
+        <!-- Example Bar Chart Card-->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-bar-chart"></i>Overall Stats
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-8 my-auto">
+                <canvas id="myBarChart" width="100" height="50"></canvas>
+              </div>
+              <div class="col-sm-4 text-center my-auto">
+                <div class="h4 mb-0 text-primary">139</div>
+                <div class="small text-muted">PRs</div>
+                <hr>
+                <div class="h4 mb-0 text-warning">122</div>
+                <div class="small text-muted">Merges</div>
+                <hr>
+                <div class="h4 mb-0 text-success">195</div>
+                <div class="small text-muted">Reviews</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        </div>
+
+      </div>
+    </div>
+
+    {{/each}}
+    <!--End Fluid-->
+  </div>
+</div>

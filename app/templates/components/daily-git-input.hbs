@@ -1,0 +1,45 @@
+<div class="daily-input row">
+
+  <div class="input-group col-sm-6 mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Pull Request: </span>
+    </div>
+    {{input type="number" class="form-control" value=pr aria-label="Default"
+            aria-describedby="inputGroup-sizing-default" placeholder="Eg. 1"}}
+    <button type="button" class="minus btn btn-dark"> - </button>
+    <button type="button" class="plus btn btn-light"> + </button>
+  </div>
+
+  <div class="input-group col-sm-6 mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Code Reviews:</span>
+    </div>
+    {{input type="number" class="form-control" value=revieww aria-label="Default"
+            aria-describedby="inputGroup-sizing-default" placeholder="Eg. 1"}}
+    <button type="button" class="minus btn btn-dark"> - </button>
+    <button type="button" class="plus btn btn-light"> + </button>
+  </div>
+
+  <div class="input-group col-sm-6 mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Successful Merges:</span>
+    </div>
+    {{input type="number" class="form-control" value=merge aria-label="Default"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Eg. 1"}}
+    <button type="button" class="minus btn btn-dark"> - </button>
+    <button type="button" class="plus btn btn-light"> + </button>
+  </div>
+
+  <div class="input-group col-sm-6 mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Build Failure:</span>
+    </div>
+    {{input type="number" class="form-control" value=failure aria-label="Default"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Eg. 1"}}
+    <button type="button" class="minus btn btn-dark"> - </button>
+    <button type="button" class="plus btn btn-light"> + </button>
+  </div>
+
+</div>
