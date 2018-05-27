@@ -10,11 +10,13 @@
 
     {{#each model as |sprintCard|}}
       {{sprint-listing sprint = sprintCard}}
-      {{daily-git-input}}
+      {{daily-git-input sprint = sprintCard}}
+    {{/each}}
+
 
       <div class="area-graph mb-3">
         <div class="card-header">
-          <i class="fa fa-area-chart"></i> Daily Performance
+          <i class="fa fa-chart-area"></i> Daily Performance
         </div>
         <div class="card-body">
           <canvas id="myAreaChart" width="100%" height="50"></canvas>
@@ -27,7 +29,7 @@
         <!-- Example Bar Chart Card-->
         <div class="card mb-3">
           <div class="card-header">
-            <i class="fa fa-bar-chart"></i>Overall Stats
+            <i class="fa fa-chart-bar"></i> Overall Stats
           </div>
           <div class="card-body">
             <div class="row">
@@ -52,7 +54,7 @@
       </div>
     </div>
 
-    {{/each}}
+
     <!--End Fluid-->
   </div>
 </div>
