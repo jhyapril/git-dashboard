@@ -11,9 +11,10 @@
     {{#each model as |sprintCard|}}
       {{sprint-listing sprint = sprintCard}}
       {{daily-git-input sprint = sprintCard}}
+      {{day-dashboard sprint = sprintCard}}
     {{/each}}
 
-
+      <br>
       <div class="area-graph mb-3">
         <div class="card-header">
           <i class="fa fa-chart-area"></i> Daily Performance

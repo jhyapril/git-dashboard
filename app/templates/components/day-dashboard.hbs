@@ -1,0 +1,54 @@
+<div class="cards">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <i class="fa fa-users" style="color: royalblue"></i>
+        <button class="btn btn-link" {{action 'toggleCard1'}}>
+          Stand-up Dashboard
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse {{if show1 "show"}}">
+      <div class="card-body">
+        You have made {{sprint.prevDayPr}} Pull Requests,
+        {{sprint.prevDayReview}} Code Reviews,
+        {{sprint.prevDayMerge}} Code Merges to Develop
+        and committed {{sprint.prevDayMerge}} Jenkins Build Failures.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <i class="fa fa-tachometer-alt" style="color: royalblue"></i>
+        <button class="btn btn-link" {{action 'toggleCard2'}}>
+          Performance Compared with Previous Day
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse {{if show2 "show"}}" aria-labelledby="headingTwo"
+         data-parent="#accordion">
+      <div class="card-body">
+        {{performanceRating}}
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <i class="fa fa-address-card" style="color: royalblue"></i>
+        <button class="btn btn-link" {{action 'toggleCard3'}}>
+          Something else
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse {{if show3 "show"}}">
+      <div class="card-body">
+        In progress.
+      </div>
+    </div>
+  </div>
+</div>
