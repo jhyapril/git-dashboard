@@ -1,16 +1,16 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  sprintNumber: DS.attr('number'),
-  sprintPr: DS.attr('number'),
-  sprintReview: DS.attr('number'),
-  sprintMerge: DS.attr('number'),
-  sprintFailure: DS.attr('number'),
-  sprintDate: DS.attr('date', {
+  sprint: DS.attr('number'),
+  totalpr: DS.attr('number'),
+  totalreview: DS.attr('number'),
+  totalmerge: DS.attr('number'),
+  totalfailure: DS.attr('number'),
+  created: DS.attr('date', {
     defaultValue() { return new Date(); }
   }),
-  prevDayPr: DS.attr('number'),
-  prevDayReview: DS.attr('number'),
-  prevDayMerge: DS.attr('number'),
-  prevDayFailure: DS.attr('number'),
+  daypr: DS.attr('number'),
+  dayreview: DS.attr('number'),
+  daymerge: DS.attr('number'),
+  dayfailure: DS.attr('number'),
 });

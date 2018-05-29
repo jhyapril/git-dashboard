@@ -13,7 +13,7 @@ export default function() {
           sprintReview: 18,
           sprintMerge: 8,
           sprintFailure: 2,
-          sprintDate: new Date(2018, 5, 2),
+          sprintDate: "2018/5/2",
           prevDayPr: 2,
           prevDayReview: 4,
           prevDayMerge: 1,

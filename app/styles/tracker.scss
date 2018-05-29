@@ -1,4 +1,5 @@
 .content-wrapper {
+  color: slategrey;
 
   .daily-input {
     max-height: 25rem;
@@ -17,21 +18,19 @@
       font-weight: bold;
       border-radius: 20%;
     }
-
-    .submit-git-input {
-      margin: 0 15px 10px 15px;
-    }
-
   }
-  .cards{
+
+  .cards {
     .card-header {
       border-bottom: 0px;
     }
     .card-body {
       margin: 0 15px 0 15px;
     }
+  }
 
-
+  .submit-git-input {
+    margin-bottom: 10px;
   }
 
   .area-graph {

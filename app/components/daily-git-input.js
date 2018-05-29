@@ -1,10 +1,6 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  pr: 0,
-  review: 0,
-  merge: 0,
-  failure: 0,
 
   actions: {
     addPr: function() {
@@ -40,36 +36,6 @@ export default Component.extend({
       }
     },
 
-    saveInput: function(id) {
-      const newDayPr = this.get('pr');
-      const newDayReview = this.get('review');
-      const newDayMerge = this.get('merge');
-      const newDayFailure = this.get('failure');
-
-      const totalNewPr = this.get('sprint.sprintPr') + newDayPr;
-      const totalNewReview = this.get('sprint.sprintReview') + newDayReview;
-      const totalNewMerge = this.get('sprint.sprintMerge') + newDayMerge;
-      const totalNewFailure = this.get('sprint.sprintFailure') + newDayFailure;
-
-      this.set('sprint.sprintPr', totalNewPr);
-      this.set('sprint.sprintReview', totalNewReview);
-      this.set('sprint.sprintMerge', totalNewMerge);
-      this.set('sprint.sprintFailure', totalNewFailure);
-      this.set('sprint.prevDayPr', newDayPr);
-      this.set('sprint.prevDayReview', newDayReview);
-      this.set('sprint.prevDayMerge', newDayMerge);
-      this.set('sprint.prevDayFailure', newDayFailure);
-      this.set('pr', 0);
-      this.set('review', 0);
-      this.set('merge', 0);
-      this.set('failure', 0);
-
-      // this.get('store').creatRecord('tracker').then((model) => {
-      //
-      // });
-      // save to database
-      // clear all input
-    }
 
 
   } // end of actions

@@ -1,7 +1,8 @@
 import Controller from '@ember/controller';
 
-export default Controller.extend({
-  currentSprint: 25,
+const { alias } = Ember.computed;
 
+export default Controller.extend({
+  tracker : Ember.inject.controller(),
 
 });
