@@ -10,11 +10,16 @@
     </div>
 
     <div id="collapseOne" class="collapse {{if show1 "show"}}">
-      <div class="card-body">
-        You have made {{sprint.prevDayPr}} Pull Requests,
-        {{sprint.prevDayReview}} Code Reviews,
-        {{sprint.prevDayMerge}} Code Merges to Develop
-        and committed {{sprint.prevDayMerge}} Jenkins Build Failures.
+      <div class="card-body" >
+        <ui>
+          You have made:
+          <li style="color: limegreen">{{sprint.daypr}} Pull Requests</li>
+          <li style="color: limegreen">{{sprint.dayreview}} Code Reviews</li>
+          <li style="color: limegreen">{{sprint.daymerge}} Branch Merges</li>
+          <br>
+          You have committed:
+          <li style="color: darkred">{{sprint.dayfailure}} Jenkins Build Failures</li>
+        </ui>
       </div>
     </div>
   </div>
@@ -31,7 +36,22 @@
     <div id="collapseTwo" class="collapse {{if show2 "show"}}" aria-labelledby="headingTwo"
          data-parent="#accordion">
       <div class="card-body">
-        {{performanceRating}}
+        <h5>Short Summary: </h5>
+        <p><i class="{{if (is-more diffPr) "fas fa-crown" "fas fa-skull"}}"
+           style="color:  {{if (is-more diffPr) 'limegreen' 'darkred'}}"></i>
+          - {{diff-desc diffPr}} <strong>Pull Requests.</strong></p>
+
+        <p><i class="{{if (is-more diffReview) "fas fa-crown" "fas fa-skull"}}"
+              style="color:  {{if (is-more diffReview) 'limegreen' 'darkred'}}"></i>
+          - {{diff-desc diffReview}} <strong>Code Reviews.</strong></p>
+
+        <p><i class="{{if (is-more diffMerge) "fas fa-crown" "fas fa-skull"}}"
+              style="color:  {{if (is-more diffMerge) 'limegreen' 'darkred'}}"></i>
+          - {{diff-desc diffMerge}} <strong>Branch Merges.</strong></p>
+
+        <p><i class="{{if (is-more diffFailure) "fas fa-crown" "fas fa-skull"}}"
+              style="color:  {{if (is-more diffFailure) 'limegreen' 'darkred'}}; "></i>
+          - {{diff-desc diffFailure}} <strong>Jenkins Build Failure.</strong></p>
       </div>
     </div>
   </div>
