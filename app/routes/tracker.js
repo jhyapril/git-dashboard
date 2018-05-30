@@ -1,11 +1,12 @@
-import Route from '@ember/routing/route';
+import Route   from '@ember/routing/route';
+import { Promise, resolve } from 'rsvp';
 
 export default Route.extend({
   model() {
-    // return this.store.findAll('tracker').then(function(allResponse) {
-    //   const id = allResponse.get('length') - 1;
-    //   return allResponse.objectAt(id);
-    // });
     return this.store.findAll('tracker');
+
+    // return new Promise(()=>{
+    //   resolve(this.store.findAll('tracker'));
+    // })
   },
 })
