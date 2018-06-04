@@ -10,7 +10,17 @@ export default Controller.extend({
 
   isShowingModal: false,
   modal1: false,
+
+  goBack: function(){
+    this.transitionToRoute('index');
+  },
+  bindResizeEvent: function() {
+    jQuery(window).bind('beforeunload', Ember.run.bind(this, this.goBack()));
+  }.on('init'),
+
   actions: {
+
+
     saveInput: function() {
       const newDayPr = this.pr;
       const newDayReview = this.review;
@@ -69,4 +79,10 @@ export default Controller.extend({
 
 
   } // end of actions
+
 });
+
+//
+// $(window).bind('beforeunload',function(){
+//   this.actions.goBack();
+// });
