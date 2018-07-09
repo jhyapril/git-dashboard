@@ -8,6 +8,7 @@
       <li class="breadcrumb-item active">My Dashboard</li>
     </ol>
     {{#each model as |tracker|}}
+      <div {{action "show" tracker}}>show</div>
       {{sprint-listing sprint = tracker}}
       {{daily-git-input
         sprint = tracker

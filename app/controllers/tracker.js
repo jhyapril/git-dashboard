@@ -7,19 +7,22 @@ export default Controller.extend({
   merge: 0,
   failure: 0,
   sprintNumber: 25,
-
+  data: computed.readOnly('model'),
   isShowingModal: false,
   modal1: false,
 
-  goBack: function(){
-    this.transitionToRoute('index');
-  },
-  bindResizeEvent: function() {
-    jQuery(window).bind('beforeunload', Ember.run.bind(this, this.goBack()));
-  }.on('init'),
+  // goBack: function(){
+  //   this.transitionToRoute('index');
+  // },
+  // bindResizeEvent: function() {
+  //   jQuery(window).bind('beforeunload', Ember.run.bind(this, this.goBack()));
+  // }.on('init'),
 
   actions: {
-
+    show: function(item) {
+      console.log(this.data);
+      console.log(item);
+    },
 
     saveInput: function() {
       const newDayPr = this.pr;

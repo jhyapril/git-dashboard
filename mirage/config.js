@@ -4,22 +4,18 @@ export default function() {
 
   this.get('/trackers', function() {
     return {
-      data: {
-        type: 'tracker',
-        id: 1,
-        attributes: {
-          sprintNumber: 25,
-          sprintPr: 13,
-          sprintReview: 18,
-          sprintMerge: 8,
-          sprintFailure: 2,
-          sprintDate: "2018/5/2",
-          prevDayPr: 2,
-          prevDayReview: 4,
-          prevDayMerge: 1,
-          prevDayFailure: 0,
-        }
-      }
-    };
+      "trackers" : [ null, {
+        "created" : "2018-05-29T12:05:26.126Z",
+        "dayfailure" : 0,
+        "daymerge" : 4,
+        "daypr" : 3,
+        "dayreview" : 2,
+        "sprint" : 25,
+        "totalfailure" : 1,
+        "totalmerge" : 21,
+        "totalpr" : 20,
+        "totalreview" : 24
+      } ]
+    }
   });
 }
